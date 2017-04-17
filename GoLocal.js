@@ -15,7 +15,7 @@ javascript:(function() {
     if (!terminated) {
       var matchFound = window.location.href.match(matcher);
       if (matchFound) {
-        var link = window.location.href.replace('s://www.qab', '://local');
+        var link = window.location.href.replace(matcher.live, matcher.local);
         window.location.href = link;
         terminated = true;
       }
